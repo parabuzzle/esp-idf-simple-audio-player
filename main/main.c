@@ -1,13 +1,37 @@
-// main entry point for the application
+// Copyright (c) 2023 Michael Heijmans
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+//
+// Description:
+// This is the main entry point for the esp-idf-wav-player project.
+// It will setup the sdcard and i2s and play a wav file.
+//
+// The wav file must be 16bit, 44.1kHz, stereo and have a 44 byte header.
 
 #include "configuration.h"  // basic sysetm includes and pin setup
 #include "sdcard.h"         // sdcard intialization
 #include "driver/i2s_std.h" // i2s setup
 
 // defines
-#define REBOOT_WAIT 5000
-#define AUDIO_BUFFER 2048
-#define WAV_FILE "/sdcard/test.wav"
+#define REBOOT_WAIT 5000            // reboot after 5 seconds
+#define AUDIO_BUFFER 2048           // buffer size for reading the wav file and sending to i2s
+#define WAV_FILE "/sdcard/test.wav" // wav file to play
 
 // constants
 const char *TAG = "esp-idf-wav-player";
