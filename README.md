@@ -116,7 +116,6 @@ I (308) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
 I (315) heap_init: At 4008C1A8 len 00013E58 (79 KiB): IRAM
 I (322) spi_flash: detected chip: generic
 I (326) spi_flash: flash io: dio
-W (329) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
 I (343) cpu_start: Starting scheduler on PRO CPU.
 I (0) cpu_start: Starting scheduler on APP CPU.
 I (354) esp-idf-wav-player: Starting up
